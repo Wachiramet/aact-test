@@ -2,37 +2,56 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > header {
+  padding-top: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App > .filter > div {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  background-color: #f1f1f1;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App > .filter > div:hover {
+  background-color: #d4d4d4;
+  cursor: pointer;
+}
+
+.App > .filter > div.selected {
+  background-color: #6ca7ff;
+}
+
+.App > .filter > input {
+  padding: 0.2rem;
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+.itemCards {
+  padding: 64px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 32px;
+  row-gap: 32px;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.itemCards > .itemCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.itemCards > .itemCard > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.itemCards > .itemCard > span:nth-child(2) {
+  color: #979797;
 }
